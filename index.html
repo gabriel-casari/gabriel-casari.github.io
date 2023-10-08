@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tab personalization -->
+    <title>Gabriel Casari</title>
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="public/css/home.css">
+</head>
+
+<body>
+    <!-- ##################################################################### Preloader ########################################################################## -->
+    <!-- Preloader -->
+    <div class="preloader"></div>
+    <img src="public/images/texture.webp" alt="" class="preloader_texture">
+
+    <!-- Ojo -->
+    <div class="eyeball">
+        <div class='text1'><p>click para entrar</p></div>
+        <div class='text2'><p>click to enter</p></div>
+        <img class="pupil" src="public/images/pupil.svg" alt="">
+        <img class="eyeball_inside" src="public/images/eyeball.svg" alt="">
+        <div class="shadow"></div>
+    </div>
+
+    <!-- <div class='eyeball_afterclick'>
+        <div class='pupil' id='pupil'></div>
+        <div class='shadow'></div> 
+    </div> -->
+    
+    <!-- ##################################################################### Content ########################################################################## -->
+    <div class="header_container">
+        <!-- Menu -->
+        <header>
+            <!-- Logo -->
+            <div class="logo_container" onmouseover="over()" onmouseout="out()" ontouchstart="touch()">
+                <img src="public/images/logo.svg" alt="" class="logo">
+                <img src="public/images/lema.svg" alt="" class="lema">
+            </div>
+
+            <!-- Hamburguer -->
+            <div class="burger_container">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+            <!-- Navbar -->
+            <nav class="menu">
+                <ul>
+                    <li><a id="foto_menu">fotografía</a></li>
+                    <li><a id="plan_menu">plans</a></li>
+                    <li><a id="manip_menu">manipulación</a></li>
+                    <li><a id="cine_menu">cinemagraphs</a></li>
+                    <li><a id="design_menu">diseño</a></li>
+                    <li><a id="film_menu">filmmaking</a></li>
+                    <li><a id="about_menu">sobre mí</a></li>
+                    <div class="indicator"></div>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Mobile landscape message  -->
+        <div class="mobile_warning">
+            <img src="public/images/rotate.svg" alt="">
+            <p>Por favor, rota la pantalla!<br>Please, rotate your screen</p>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile_menu_container off">
+            <nav class="mobile_menu">
+                <ul>
+                    <li><a id="foto_menu">fotografía</a></li>
+                    <li><a id="plan_menu">plans</a></li>
+                    <li><a id="manip_menu">manipulación</a></li>
+                    <li><a id="cine_menu">cinemagraphs</a></li>
+                    <li><a id="design_menu">diseño</a></li>
+                    <li><a id="film_menu">filmmaking</a></li>
+                    <li><a id="about_menu">sobre mí</a></li>
+                </ul>
+            </nav>
+            <div class="bottom"></div>
+        </div>
+    </div>
+
+    <!-- #################################  Scroller   ################################# -->
+    <div class="scroller_container">
+        <div class="header_space"></div>
+        <!-- El primer elemento de cada categoría es el inicio de sección referenciado en el menú con id aka. cabecera de categoría -->
+        <div class="scroller">
+            <!-- fotografia -->
+            <img class="media section" src="public/images/juan_portrait.webp" alt="" id="foto">
+            <img class="media" src="public/images/ana_portrait.webp" alt="">
+            <img class="media" src="public/images/tony_portrait.webp" alt="">
+            <img class="media" src="public/images/chantal_portrait.webp" alt="">
+            <img class="media" src="public/images/sashy_portrait.webp" alt="">
+            <div class="separator"></div>
+
+            <!-- planes -->
+            <img class="media section" src="public/images/basic.webp" alt="" id="plan">
+            <img class="media" src="public/images/basic_plus.webp" alt="">
+            <img class="media" src="public/images/cinema.webp" alt="">
+            <img class="media" src="public/images/info.webp" alt="">
+            <div class="separator"></div>
+
+            <!-- manipulación fotográfica -->
+            <img class="media section" src="public/images/dia_de_muertos.webp" alt="" id="manip">
+            <img class="media" src="public/images/shiva.webp" alt="">
+            <img class="media" src="public/images/ninja.webp" alt="">
+            <img class="media" src="public/images/we_are_fine.webp" alt="">
+            <div class="separator"></div>
+            
+            <!-- cinemagraphs -->
+            <!-- <img class="media section" src="public/images/CINE.jpg" alt="" id="cine">
+            <img class="media" src="public/images/CINE.jpg" alt=""> -->
+            <video class="media section" id="cine" autoplay loop muted plays-inline><source src="public/images/juan_cinema.mp4" type="video/mp4"></video>
+            <video class="media" autoplay loop muted plays-inline><source src="public/images/marien_cinema.mp4" type="video/mp4"></video>
+            <video class="media" autoplay loop muted plays-inline><source src="public/images/stars_cinema.mp4" type="video/mp4"></video>
+            <div class="separator"></div>
+
+            <!-- design -->
+            <img class="media section" src="public/images/eladio.webp" alt="" id="design">
+            <img class="media" src="public/images/fisc.webp" alt="">
+            <img class="media" src="public/images/logos.webp" alt="">
+            <img class="media" src="public/images/cojin.webp" alt="">
+            <img class="media" src="public/images/pegatina.webp" alt="">
+            <div class="separator"></div>
+            
+            <!-- filmmaking -->
+            <img class="media section" src="public/images/cerebro_dejame_dormir.webp" alt="" id="film">
+            <img class="media" src="public/images/verano.webp" alt="">
+            <div class="separator"></div>
+    
+            <!-- Sobre mi -->
+            <div class="about_container section" id="about">
+                <div class="flex">
+                    <div class="flex_photo">
+                        <img src="public/images/me.webp" alt="">
+                    </div>
+                    <div class="flex_text">
+                        <p> 
+                            ¡Hola!, soy Gabriel Casari. 22 years old Venezuelan creative based in Panama.
+                        </p>
+                        <p> 
+                            Soy desarrollador de software de profesión. But let's not restraint it, llevo una década creando y buscando integrar 
+                            diferentes medios a mi obra.
+                        </p>
+                        <p> 
+                            The goal of this website is to showcase my most developed hobbies, y darle a mi fotografía un espacio profesional.
+                        </p>
+                        <p>
+                            Aprecio tu tiempo e interés en mi trabajo. Si tienes una idea o proyecto en mente, I'm open to collaborate! 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- #################################   Socials menu  #################################-->
+    <div class="socials_container">
+        <div class="socials">
+            <a href="https://wa.me/50726703996?text=¡Hola!%20Me%20interesa%20tu%20trabajo" target="_blank"><img src="public/images/whatsapp.svg" alt=""></a>
+            <a href="https://www.instagram.com/gabrielcasari_/" target="_blank"><img src="public/images/instagram.svg" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCEq04EcApT61BT3J3P3TvwQ" target="_blank"><img src="public/images/youtube.svg" alt=""></a>
+            <a target="_blank"><img class="email_button" src="public/images/mail.svg" alt=""></a>
+            <a href="https://www.behance.net/gabriel_casari" target="_blank"><img src="public/images/behance.svg" alt=""></a>
+        </div>
+    </div>
+
+    <!-- #################################   Email form   ###############################-->
+    <div class="email_container">
+        <div class="header_space"></div>
+        <div class="form_container email_off">
+            <form id="email_form" class="email_form">
+                <input type="text" id="nombre" placeholder="name" autocapitalize="words" required>
+                <input type="email" id="email" placeholder="e-mail" pattern="[a-z0-9._+-]+@[a-z0-9._+-]+\.[a-z]{2,}" required>
+                <textarea  id="message" rows="5" placeholder="¿cómo puedo ayudarte? / how can I help you?" autocomplete="off" autocapitalize="sentences" required></textarea>
+                <button type="submit" id="email_button">enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom alert -->
+    <div class="alert_container">
+        <div class="header_space"></div>
+        <div class="alert alert_off" id="alert">
+            <span><img src="public/images/sent.svg" alt=""></span>
+            sent, ¡gracias!
+        </div>
+    </div>
+
+    <!-- Background texture  -->
+    <img src="public/images/texture.webp" alt="" class="texture">
+
+    <!-- ##################################################################### Internal Javascript #####################################################################-->
+    <script src="public/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        // Lema behind logo
+        var logo = document.querySelector('.logo');
+        var lema = document.querySelector('.lema');
+        var logo_width = logo.offsetWidth;
+
+        lema.style.transform = "translateX(-"+logo_width+"px)";
+
+        // Logo and lema transition
+        var logo_container = document.querySelector('.logo_container');
+
+            function over() {
+                logo.style.opacity = 0;
+                lema.style.opacity = 1;
+            }
+
+            function out() {
+                logo.style.opacity = 1;
+                lema.style.opacity = 0;
+            }
+
+            function touch() {
+                logo.style.opacity = 0;
+                lema.style.opacity = 1;
+
+                setTimeout(() => {
+                    logo.style.opacity = 1;
+                    lema.style.opacity = 0;
+                }, "2000");
+            }
+        
+        // Menu underline slider
+        const indicator = document.querySelector('.indicator');
+        const links = document.querySelectorAll('.menu ul li a');
+
+        var indicador_inicial = document.getElementById("foto_menu");
+        indicator.style.width = indicador_inicial.offsetWidth+"px";
+        indicator.style.left = indicador_inicial.offsetLeft+"px";
+
+        var scroller = document.querySelector('.scroller');
+        var sections = document.querySelectorAll(".section");
+
+            // Move indicator onscroll
+            scroller.addEventListener('scroll', e => {      // Escucha cada que .scroller se scrollee
+                sections.forEach((item)=>{                  // Obtén cada .section de .scroller
+                    var id = item.getAttribute("id");
+                    var rect = item.getBoundingClientRect();
+                    var coord_x = rect.x;
+                    var zone = window.innerWidth * 0.05;
+
+                    if(coord_x > -10 && coord_x <= zone){
+                        // Si la cabecera de categoría está en visible en el viewport, mueve el indicador en el menú. 
+                       indicator.style.width = document.getElementById(id+"_menu").offsetWidth+"px";
+                       indicator.style.left = document.getElementById(id+"_menu").offsetLeft+"px";
+                    }
+                })
+            })
+
+            // Move indicator and .section onclick
+            links.forEach(link => {
+                link.addEventListener('click', e => {
+                    indicator.style.width = `${e.target.offsetWidth}px`;
+                    indicator.style.left = `${e.target.offsetLeft}px`;
+
+                    var link_id = String(link.getAttribute("id"));
+                    var section_id = link_id.replace("_menu","");
+
+                    document.getElementById(section_id).scrollIntoView({behavior: "smooth", inline:"start"});
+                })
+            })
+
+        // Burger menu animation
+        $(document).ready(function(){
+            $('.burger_container').click(function(){
+                $('.line1').toggleClass('line1_clicked');
+                $('.line2').toggleClass('line2_clicked');
+                $('.line3').toggleClass('line3_clicked');
+                $('.off').toggleClass('on');
+            })
+        })
+
+        // Mobile menu
+        const mobile_links = document.querySelectorAll('.mobile_menu ul li a');
+
+        mobile_links.forEach(link => {
+            link.addEventListener('click', e => {
+                // Border around clicked section
+                const activeLink = document.querySelector('.active');
+                activeLink.classList.remove('active');
+                link.classList.add('active');
+
+                //Toggle mobile menu 
+                $('.on').addClass('off');
+                $('.on').removeClass('on');
+
+
+                //reiniciar burger icon
+                $('.line1').removeClass('line1_clicked');
+                $('.line2').removeClass('line2_clicked');
+                $('.line3').removeClass('line3_clicked');
+
+                //Scroll to .section onclick 
+                var link_id = String(link.getAttribute("id"));
+                var section_id = link_id.replace("_menu","");
+                    
+                document.getElementById(section_id).scrollIntoView({behavior: "smooth", inline:"start"});
+            })
+        })
+
+        // Make .scroller scrollable with mouse wheel
+        var scroll = 0; 
+        
+        scroller.addEventListener("wheel", function(e) {
+            e.preventDefault();
+
+            scroller.scrollBy({top: 0, left: e.deltaY + scroll, behavior:"smooth"});
+            scroll = e.deltaY;
+        });
+
+        // Email form on / off on click
+        $('.email_button').click(function() {
+            $('.email_off').toggleClass('email_on');
+        })
+
+        // send email y alerta
+        const form = document.getElementById("email_form");
+        const nombre = document.getElementById("nombre");
+        const email = document.getElementById("email");
+        const body = document.getElementById("message");
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+
+            console.log(nombre.value + email.value + message.value);
+
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "gabcasari.ef@gmail.com",
+                Password : "C250E4E40EF5297B1F7BA7653C04BAE655FB",
+                To : 'gabcasari.ef@gmail.com',
+                From : "gabcasari.ef@gmail.com",
+                Subject : "Consulta from " + nombre.value + " - website.",
+                Body : "<h2> Cliente: " + nombre.value + " / " + email.value + "<br>Consulta: " + body.value + "</h2>"
+            }).then(
+                sent()
+            );
+        });
+
+        function sent(){
+            let alert = document.getElementById("alert");
+
+            nombre.value = "";
+            email.value = "";
+            message.value = "";
+
+            alert.classList.remove("alert_off");
+
+            setTimeout(() => {
+                alert.classList.add("alert_off");
+            }, "2000");
+
+            setTimeout(() => {
+                $('.email_on').removeClass('email_on');
+            }, "3000");
+        }
+    </script>
+</body>
+</html>
